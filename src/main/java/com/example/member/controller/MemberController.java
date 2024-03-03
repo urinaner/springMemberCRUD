@@ -12,7 +12,6 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-@RestController
 public class MemberController {
 
     //생성자 주입
