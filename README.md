@@ -42,7 +42,7 @@
 5. 글삭제 (/board/api/delete/{id}) (POST)
 
 
-# RESTAPI 회원별기능
+# RESTAPI 회원기능
 1. 회원가입 (/member/api/save) (POST)
    2. {  
       "memberEmail": "qt",
