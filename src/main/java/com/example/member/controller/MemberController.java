@@ -37,6 +37,7 @@ public class MemberController {
 
     @PostMapping("/member/login")
     public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session){
+        System.out.println("memberDTO = " + memberDTO + ", session = " + session);
         MemberDTO loginResult = memberService.login(memberDTO);
         if (loginResult != null){
             //로그인
@@ -46,7 +47,6 @@ public class MemberController {
             //login 실패
             return "login";
         }
-
     }
 
     @GetMapping("/member/")

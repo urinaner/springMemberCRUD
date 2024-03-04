@@ -42,11 +42,11 @@
 <button onclick="deleteReq()">삭제</button>
 
 <!-- 댓글 작성 부분 -->
-<div id="comment-write">
-    <input type="text" id="commentWriter" placeholder="작성자">
-    <input type="text" id="commentContents" placeholder="내용">
-    <button id="comment-write-btn" onclick="commentWrite()">댓글작성</button>
-</div>
+<!--<div id="comment-write">-->
+<!--    <input type="text" id="commentWriter" placeholder="작성자">-->
+<!--    <input type="text" id="commentContents" placeholder="내용">-->
+<!--    <button id="comment-write-btn" onclick="commentWrite()">댓글작성</button>-->
+<!--</div>-->
 
 <!-- 댓글 출력 부분 -->
 <!--<div id="comment-list">-->
@@ -112,7 +112,7 @@
     const listReq = () => {
         console.log("목록 요청");
         const page = [[${page}]];
-        location.href = "/board/paging?page="+page;
+        location.href = "/board/";
     }
     const updateReq = () => {
         console.log("수정 요청");

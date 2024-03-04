@@ -20,4 +20,16 @@
 3. 글조회 (/board/{id})
 4. 글수정 (/board/update/{id})
 5. 글삭제 (/board/delete/{id})
-6. 페이징처리 (/board/paging)
+
+# RESTAPI 게시판기능
+1. 글쓰기 (/board/api/save) (POST)
+       {
+       "boardWriter": "jyj",
+       "boardPass": "jyj",
+       "boardTitle": "jyj",
+       "boardContents": "jyj"
+       }
+2. 글목록 (/board/api/) (GET)
+3. 글조회 (/board/api/{id}) (GET)
+4. 글수정 (/board/api/update/{id}) (POST)
+5. 글삭제 (/board/api/delete/{id})

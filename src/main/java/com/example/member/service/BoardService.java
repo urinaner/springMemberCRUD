@@ -2,7 +2,6 @@ package com.example.member.service;
 
 
 import com.example.member.dto.BoardDTO;
-import com.example.member.entity.BaseEntity;
 import com.example.member.entity.BoardEntity;
 import com.example.member.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,16 +39,25 @@ public class BoardService {
         boardRepository.updateHits(id);
     }
 
+    @Transactional
     public BoardDTO findById(Long id) {
         Optional<BoardEntity> optionalBoardEntity = boardRepository.findById(id);
-        if (optionalBoardEntity.isPresent()){
+        if (optionalBoardEntity.isPresent()) {
             BoardEntity boardEntity = optionalBoardEntity.get();
             BoardDTO boardDTO = BoardDTO.toBoardDTO(boardEntity);
             return boardDTO;
-        }else {
+        } else {
             return null;
         }
     }
 
+    public BoardDTO update(BoardDTO boardDTO) {
+        BoardEntity boardEntity = BoardEntity.toUpdateEntity(boardDTO);
+        boardRepository.save(boardEntity);
+        return findById(boardDTO.getId());
+    }
 
+    public void delete(Long id) {
+        boardRepository.deleteById(id);
+    }
 }
