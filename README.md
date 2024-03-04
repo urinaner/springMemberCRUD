@@ -23,13 +23,41 @@
 
 # RESTAPI 게시판기능
 1. 글쓰기 (/board/api/save) (POST)
-       {
-       "boardWriter": "jyj",
-       "boardPass": "jyj",
-       "boardTitle": "jyj",
-       "boardContents": "jyj"
-       }
+   1. {
+      "boardWriter": "jyj",
+      "boardPass": "jyj",
+      "boardTitle": "jyj",
+      "boardContents": "jyj"
+      } 
 2. 글목록 (/board/api/) (GET)
 3. 글조회 (/board/api/{id}) (GET)
 4. 글수정 (/board/api/update/{id}) (POST)
-5. 글삭제 (/board/api/delete/{id})
+   1. {
+      "id" : 1,
+      "boardWriter": "jyj",
+      "boardPass": "jyj",
+      "boardTitle": "jyj",
+      "boardContents": "jyj"
+      }
+5. 글삭제 (/board/api/delete/{id}) (POST)
+
+
+# RESTAPI 회원별기능
+1. 회원가입 (/member/api/save) (POST)
+   2. {  
+      "memberEmail": "qt",
+      "memberPassword": "123",
+      "memberName": "qt"
+      },
+2. 회원목록 (/member/api/) (GET)
+3. 회원조회 (/member/api/{id}) (GET)
+4. 정보수정 (/member/api/update/{id}) (POST)
+   1. {  
+      "id": 13,
+      "memberEmail": "qt",
+      "memberPassword": "123",
+      "memberName": "qt"
+      },
+5. 글삭제 (/member/api/delete/{id}) (POST)
+
+

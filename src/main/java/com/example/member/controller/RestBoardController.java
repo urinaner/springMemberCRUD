@@ -34,4 +34,17 @@ public class RestBoardController {
 
         return boardDTO;
     }
+
+    @GetMapping("/delete/{id}")
+    public BoardDTO delete(@PathVariable Long id){
+        BoardDTO boardDTO = boardService.findById(id);
+        boardService.delete(id);
+        return boardDTO;
+    }
+
+    @PostMapping("/update")
+    public BoardDTO update(@RequestBody BoardDTO boardDTO) {
+        boardService.update(boardDTO);
+        return boardDTO;
+    }
 }
